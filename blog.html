@@ -1,0 +1,182 @@
+Replace the entire content of essay.html with this code so it has the same header navigation, styling, and article headlines as your home page:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Essays — My Personal Journal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --background: #faf9f6;
+    --text: #242424;
+    --muted: #777;
+    --line: #dedbd5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+/* Main Content */
+main {
+    max-width: 700px;
+    margin: 60px auto 100px;
+    padding: 0 25px;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* Articles */
+.article {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.article:first-child {
+    border-top: 1px solid var(--line);
+}
+
+.article-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+}
+
+.article h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.read-more {
+    color: var(--text);
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #999;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Your Name.</a>
+    <nav>
+        <a href="essay.html">Essays</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main>
+    <h1 class="page-title">All Essays</h1>
+
+    <!-- Article 1 -->
+    <article class="article">
+        <div class="article-meta">OCTOBER 20, 2026 · 6 MIN READ</div>
+        <h2>Understanding the Indian Economy: Where Are We Heading?</h2>
+        <p>An exploration of India's economic journey, its structural challenges, growth opportunities and the road ahead.</p>
+        <a href="article-1.html" class="read-more">Read article →</a>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="article">
+        <div class="article-meta">OCTOBER 12, 2026 · 4 MIN READ</div>
+        <h2>Why Public Policy Matters More Than Ever</h2>
+        <p>Good policies can transform societies. But what makes a policy successful, and why do some policies fail?</p>
+        <a href="article-2.html" class="read-more">Read article →</a>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="article">
+        <div class="article-meta">SEPTEMBER 28, 2026 · 5 MIN READ</div>
+        <h2>The Art of Reading and Thinking</h2>
+        <p>Reading is not simply about collecting information. It is about developing the ability to question, connect ideas and think independently.</p>
+        <a href="article-3.html" class="read-more">Read article →</a>
+    </article>
+</main>
+
+<footer>
+    <div class="copyright">© 2026 Your Name. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
+
+Do you plan to create individual pages like article-1.html next, or would you like to link them differently?
