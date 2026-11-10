@@ -30,15 +30,56 @@ body {
 }
 
 /* Header */
-    <header>
-    <a href="index.html" class="logo">Tahsin.</a>
+   header {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <nav>
-        <a href="epistles.html">Epistles</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
-    </nav>
-</header>
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+}
 
 /* Main Content */
 main {
