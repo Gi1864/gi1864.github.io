@@ -30,7 +30,7 @@ body {
 }
 
 /* Header */
-header {
+    header {
     max-width: 850px;
     margin: auto;
     padding: 35px 25px;
@@ -63,6 +63,23 @@ nav a:hover {
     opacity: 0.5;
 }
 
+@media (max-width: 600px) {
+    header {
+        padding: 25px 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+}
 /* Main Content */
 main {
     max-width: 700px;
