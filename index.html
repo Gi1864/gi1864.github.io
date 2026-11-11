@@ -1,354 +1,327 @@
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>خبر نامہ | Inshorts Urdu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Tahsin's Website</title>
 
-  <style>
-    :root {
-      --primary: #ff9933;
-      --secondary: #138808;
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --border: #334155;
-    }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
+<style>
+:root {
+    --background: #faf9f6;
+    --text: #242424;
+    --muted: #777;
+    --line: #dedbd5;
+}
 
-    html, body {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      font-family: 'Noto Nastaliq Urdu', serif, Tahoma, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+/* Header */
+
+header {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+/* Main content */
+
+main {
+    max-width: 700px;
+    margin: 90px auto 100px;
+    padding: 0 25px;
+}
+
+.intro {
+    margin-bottom: 65px;
+}
+
+.intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 540px;
+}
+
+/* Articles */
+
+.article {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.article:first-child {
+    border-top: 1px solid var(--line);
+}
+
+.article-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+}
+
+.article h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.read-more {
+    color: var(--text);
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 25px;
+    text-align: center;
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: var(--text);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 56px;
-      background: rgba(15, 23, 42, 0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 18px;
-      z-index: 100;
+        padding: 25px 20px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 1.2rem;
+    nav {
+        gap: 15px;
     }
 
-    .brand-text {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    nav a {
+        font-size: 12px;
     }
 
-    .snap-container {
-      height: 100vh;
-      width: 100vw;
-      overflow-y: scroll;
-      scroll-snap-type: y mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    .snap-container::-webkit-scrollbar { display: none; }
-
-    .story-page {
-      height: 100vh;
-      width: 100%;
-      scroll-snap-align: start;
-      scroll-snap-stop: always;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 72px 16px 20px 16px;
+    .logo {
+        font-size: 21px;
     }
 
-    .inshorts-card {
-      width: 100%;
-      max-width: 480px;
-      height: 100%;
-      max-height: 640px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+    main {
+        margin-top: 55px;
     }
 
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
+    .intro h1 {
+        font-size: 34px;
     }
 
-    .source-badge {
-      background: rgba(255, 153, 51, 0.12);
-      color: var(--primary);
-      border: 1px solid rgba(255, 153, 51, 0.3);
-      font-size: 0.82rem;
-      padding: 2px 10px;
-      border-radius: 6px;
-      line-height: 2;
+    .article h2 {
+        font-size: 23px;
     }
-
-    .card-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 20px 0;
-      overflow-y: auto;
-      scrollbar-width: none;
-    }
-    .card-content::-webkit-scrollbar { display: none; }
-
-    .story-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      line-height: 2.3;
-      margin-bottom: 14px;
-      color: #ffffff;
-    }
-
-    .story-desc {
-      font-size: 1.12rem;
-      line-height: 2.5;
-      color: #cbd5e1;
-    }
-
-    .card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 14px;
-      border-top: 1px solid var(--border);
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 2;
-    }
-
-    .read-more-link {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .read-more-link:hover { opacity: 0.85; }
-
-    .action-icons {
-      display: flex;
-      gap: 18px;
-    }
-
-    .action-icons i {
-      cursor: pointer;
-      font-size: 1.15rem;
-      color: var(--muted);
-      transition: color 0.2s;
-    }
-    .action-icons i:hover { color: var(--primary); }
-
-    .desktop-arrows {
-      position: fixed;
-      left: 24px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 100;
-    }
-
-    .arrow-btn {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      color: var(--text);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .arrow-btn:hover { background: var(--primary); color: #000; }
-
-    .status-msg {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 70vh;
-      color: var(--muted);
-      gap: 12px;
-      font-size: 1.1rem;
-      line-height: 2.2;
-    }
-
-    @media (max-width: 600px) {
-      .desktop-arrows { display: none; }
-      .story-page { padding: 66px 12px 14px 12px; }
-      .inshorts-card {
-        max-height: 100%;
-        border-radius: 16px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <div class="brand">
-      <span>🇮🇳</span>
-      <span class="brand-text">خبر نامہ</span>
+<!-- Header -->
+
+<header>
+    <a href="index.html" class="logo">Tahsin.</a>
+
+    <nav>
+         <a href="khabarnama">Khabarnama</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+
+<!-- Homepage -->
+
+<main>
+
+    <section class="intro">
+        <h1>Thoughts, ideas & observations.</h1>
+
+        <p>
+            Welcome to my personal space on the internet.
+            I write about economics, public policy, society,
+            books and everything that makes me curious.
+        </p>
+    </section>
+
+
+    <!-- Article 1 -->
+
+    <article class="article">
+        <div class="article-meta">
+            OCTOBER 20, 2026 · 6 MIN READ
+        </div>
+
+        <h2>
+            Understanding the Indian Economy:
+            Where Are We Heading?
+        </h2>
+
+        <p>
+            An exploration of India's economic journey,
+            its structural challenges, growth opportunities
+            and the road ahead.
+        </p>
+
+        <a href="article-1.html" class="read-more">
+            Read article →
+        </a>
+    </article>
+
+
+    <!-- Article 2 -->
+
+    <article class="article">
+        <div class="article-meta">
+            OCTOBER 12, 2026 · 4 MIN READ
+        </div>
+
+        <h2>
+            Why Public Policy Matters More Than Ever
+        </h2>
+
+        <p>
+            Good policies can transform societies.
+            But what makes a policy successful, and
+            why do some policies fail?
+        </p>
+
+        <a href="article-2.html" class="read-more">
+            Read article →
+        </a>
+    </article>
+
+
+    <!-- Article 3 -->
+
+    <article class="article">
+        <div class="article-meta">
+            SEPTEMBER 28, 2026 · 5 MIN READ
+        </div>
+
+        <h2>
+            The Art of Reading and Thinking
+        </h2>
+
+        <p>
+            Reading is not simply about collecting information.
+            It is about developing the ability to question,
+            connect ideas and think independently.
+        </p>
+
+        <a href="article-3.html" class="read-more">
+            Read article →
+        </a>
+    </article>
+
+
+</main>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <p>Find me around the internet</p>
+
+    <div class="social-links">
+        <a href="https://x.com/mdtahsinsaba" target="_blank">Twitter / X</a>
+        <a href="https://www.instagram.com/mdtahsinsaba" target="_blank">Instagram</a>
     </div>
-    <div style="font-size: 0.9rem; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; font-family: sans-serif;">
-      Khabarnama
+
+    <div class="copyright">
+        © Md Tahsin Saba
     </div>
-  </header>
 
-  <div class="desktop-arrows">
-    <button class="arrow-btn" onclick="scrollCard(-1)" title="پچھلی خبر"><i class="fa-solid fa-chevron-up"></i></button>
-    <button class="arrow-btn" onclick="scrollCard(1)" title="اگلی خبر"><i class="fa-solid fa-chevron-down"></i></button>
-  </div>
+</footer>
 
-  <main class="snap-container" id="snapContainer">
-    <div class="status-msg">
-      <i class="fa-solid fa-circle-notch fa-spin fa-2x" style="color: var(--primary);"></i>
-      <p>خبریں لوڈ ہو رہی ہیں...</p>
-    </div>
-  </main>
-
-  <script>
-    const SUPABASE_URL = "https://ddgpqqazihycjvkwrusd.supabase.co";
-    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRkZ3BxcWF6aWh5Y2p2a3dydXNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ0MDIxNTksImV4cCI6MjEwOTk3ODE1OX0.1Y_en06XpkwuekO9ciVYwPCGcJPWypviAmwuSAjNalc";
-
-    const container = document.getElementById('snapContainer');
-
-    function scrollCard(direction) {
-      const cardHeight = window.innerHeight;
-      container.scrollBy({ top: direction * cardHeight, behavior: 'smooth' });
-    }
-
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowDown') scrollCard(1);
-      if (e.key === 'ArrowUp') scrollCard(-1);
-    });
-
-    function speakText(text) {
-      if (!('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
-      const utt = new SpeechSynthesisUtterance(text);
-      utt.lang = 'ur-IN';
-      window.speechSynthesis.speak(utt);
-    }
-
-    function shareArticle(title, url) {
-      if (navigator.share) {
-        navigator.share({ title: title, url: url || window.location.href });
-      } else {
-        navigator.clipboard.writeText(url || window.location.href);
-        alert('لنک کاپی کر لیا گیا!');
-      }
-    }
-
-    function renderStories(newsList) {
-      container.innerHTML = '';
-      newsList.forEach(item => {
-        const page = document.createElement('section');
-        page.className = 'story-page';
-        page.innerHTML = `
-          <article class="inshorts-card">
-            <div class="card-top">
-              <span class="source-badge">${item.source_name || 'قومی'}</span>
-              <span style="font-size: 0.8rem; color: var(--muted); line-height: 2;">تازہ ترین</span>
-            </div>
-            
-            <div class="card-content">
-              <h2 class="story-title">${item.title}</h2>
-              <p class="story-desc">${item.summary}</p>
-            </div>
-
-            <div class="card-footer">
-              <a href="${item.source_url || '#'}" target="_blank" class="read-more-link">مکمل تفصیل پڑھیں ↗</a>
-              <div class="action-icons">
-                <i class="fa-solid fa-volume-high" onclick="speakText('${item.title.replace(/'/g, "\\'")}')" title="سنیں"></i>
-                <i class="fa-regular fa-share-from-square" onclick="shareArticle('${item.title.replace(/'/g, "\\'")}', '${item.source_url || ''}')" title="شیئر"></i>
-              </div>
-            </div>
-          </article>
-        `;
-        container.appendChild(page);
-      });
-    }
-
-    async function fetchNews() {
-      try {
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/news?select=*&order=created_at.desc&limit=25`, {
-          headers: {
-            "apikey": SUPABASE_ANON_KEY,
-            "Authorization": `Bearer ${SUPABASE_ANON_KEY}`
-          }
-        });
-
-        if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
-        let news = await response.json();
-
-        if (!news || news.length === 0) {
-          container.innerHTML = `
-            <div class="status-msg">
-              <i class="fa-regular fa-newspaper fa-2x"></i>
-              <p>فی الحال کوئی خبر دستیاب نہیں ہے۔</p>
-            </div>
-          `;
-          return;
-        }
-
-        renderStories(news);
-
-      } catch (err) {
-        console.error("Fetch error:", err);
-        container.innerHTML = `
-          <div class="status-msg">
-            <i class="fa-solid fa-triangle-exclamation fa-2x" style="color: #ef4444;"></i>
-            <p>خبریں لوڈ کرنے میں مسئلہ پیش آیا۔ براہِ کرم انٹرنیٹ کنکشن چیک کریں۔</p>
-          </div>
-        `;
-      }
-    }
-
-    fetchNews();
-  </script>
 </body>
 </html>
