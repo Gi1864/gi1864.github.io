@@ -16,3 +16,13 @@ plugins:
 
 paginate: 4
 paginate_path: "/page/:num/"
+
+include:
+  - index.html
+  - blog.html
+  - about.html
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
