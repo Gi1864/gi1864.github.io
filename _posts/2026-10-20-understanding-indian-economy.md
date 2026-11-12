@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Understanding the Indian Economy: Where Are We Heading?"
