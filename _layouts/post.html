@@ -5,7 +5,6 @@ layout: default
 <main class="article-page">
 
     <article>
-
         <div class="article-meta">
             {{ page.date | date: "%B %-d, %Y" }}
         </div>
@@ -18,17 +17,18 @@ layout: default
         </figure>
         {% endif %}
 
-        {% if page.excerpt %}
-        <p class="article-excerpt">{{ page.excerpt | strip_html }}</p>
-        {% endif %}
-
         <div class="article-content">
             {{ content }}
         </div>
+    </article>
+
+    {% assign share_url = page.url | absolute_url %}
+    {% assign share_title = page.title | uri_escape %}
+
+    <section class="article-extras">
 
         {% if page.tags.size > 0 %}
         <div class="article-tags">
-            <span>Tags:</span>
             {% for tag in page.tags %}
                 <a href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}">
                     {{ tag }}
@@ -37,21 +37,87 @@ layout: default
         </div>
         {% endif %}
 
-    </article>
+        <div class="article-share">
 
-    <div class="article-share">
-        <span>Share this article</span>
+            <span class="share-label">Share this article</span>
 
-        {% assign share_url = page.url | absolute_url %}
-        {% assign share_title = page.title | uri_escape %}
+            <div class="share-icons">
 
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | uri_escape }}" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="share-icon" aria-label="Share on Facebook"
+                   href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | uri_escape }}"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="share-letter">f</span>
+                </a>
 
-        <a href="https://twitter.com/intent/tweet?url={{ share_url | uri_escape }}&text={{ share_title }}" target="_blank" rel="noopener noreferrer">X</a>
+                <a class="share-icon" aria-label="Share on X"
+                   href="https://twitter.com/intent/tweet?url={{ share_url | uri_escape }}&text={{ share_title }}"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="share-letter">𝕏</span>
+                </a>
 
-        <a href="https://t.me/share/url?url={{ share_url | uri_escape }}&text={{ share_title }}" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a class="share-icon" aria-label="Share on Telegram"
+                   href="https://t.me/share/url?url={{ share_url | uri_escape }}&text={{ share_title }}"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="share-letter">➤</span>
+                </a>
 
-        <a href="https://wa.me/?text={{ share_title }}%20{{ share_url | uri_escape }}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    </div>
+                <a class="share-icon" aria-label="Share on WhatsApp"
+                   href="https://wa.me/?text={{ share_title }}%20{{ share_url | uri_escape }}"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="share-letter">◉</span>
+                </a>
+
+                <button class="share-icon" type="button"
+                        aria-label="More sharing options"
+                        onclick="shareArticle()">
+                    <span class="share-letter">•••</span>
+                </button>
+
+                <button class="share-icon" type="button"
+                        aria-label="Copy article link"
+                        onclick="copyArticleLink()">
+                    <span class="share-letter">↗</span>
+                </button>
+
+            </div>
+
+            <span id="share-message" class="share-message" aria-live="polite"></span>
+
+        </div>
+
+    </section>
 
 </main>
+
+<script>
+const articleUrl = {{ share_url | jsonify }};
+const articleTitle = {{ page.title | jsonify }};
+
+async function shareArticle() {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: articleTitle,
+                url: articleUrl
+            });
+        } catch (error) {
+            if (error.name !== "AbortError") {
+                await copyArticleLink();
+            }
+        }
+    } else {
+        await copyArticleLink();
+    }
+}
+
+async function copyArticleLink() {
+    const message = document.getElementById("share-message");
+
+    try {
+        await navigator.clipboard.writeText(articleUrl);
+        message.textContent = "Link copied!";
+    } catch (error) {
+        message.textContent = "Please copy the link from your browser.";
+    }
+}
+</script>
