@@ -11,9 +11,6 @@ tags:
   - Thinking
   - Learning
 ---
-
-# The Art of Reading and Thinking
-
 We live in a world where information is everywhere. A few minutes on the internet can expose us to more ideas, opinions, and arguments than people in earlier generations might have encountered in months.
 
 Yet, having access to information does not necessarily make us knowledgeable. And knowing many things does not automatically make us wise.
