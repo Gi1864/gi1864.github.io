@@ -241,7 +241,23 @@ footer p {
 }
 
 /* Minimal tags */
+/* Subtle divider between tags and sharing */
 
+.article-tags {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 18px;
+}
+
+.article-tags::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 1px;
+    background: var(--line);
+}
 .article-tags {
     display: flex;
     flex-wrap: wrap;
@@ -298,7 +314,15 @@ footer p {
 /* Share buttons */
 
 .share-icons {
+    display.article-share {
+    position: relative;
+    border: none;
+    padding-top: 0;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
