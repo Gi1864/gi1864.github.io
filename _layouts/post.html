@@ -9,9 +9,6 @@ layout: default
 
         <div class="article-meta">
             {{ page.date | date: "%B %-d, %Y" }}
-            {% if page.read_time %}
-                · {{ page.read_time }} MIN READ
-            {% endif %}
         </div>
 
         <h1 class="page-title">{{ page.title }}</h1>
@@ -42,8 +39,6 @@ layout: default
         {% endif %}
 
     </article>
-
-    <!-- Sharing options will be styled in a later step -->
 
     <div class="article-share">
         <span>Share this article</span>
