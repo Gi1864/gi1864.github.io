@@ -229,7 +229,7 @@ footer p {
     padding-top: 0;
 }
 
-/* Short subtle divider above tags */
+/* First subtle divider: article and tags */
 
 .article-extras::before {
     content: "";
@@ -240,14 +240,19 @@ footer p {
     margin-bottom: 18px;
 }
 
-/* Minimal tags */
-/* Subtle divider between tags and sharing */
+/* Article tags */
 
 .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
     position: relative;
     padding-bottom: 20px;
     margin-bottom: 18px;
 }
+
+/* Second subtle divider: tags and sharing */
 
 .article-tags::after {
     content: "";
@@ -257,13 +262,6 @@ footer p {
     width: 120px;
     height: 1px;
     background: var(--line);
-}
-.article-tags {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0;
-    margin-bottom: 20px;
 }
 
 .article-tags a {
@@ -311,26 +309,20 @@ footer p {
     width: 100%;
 }
 
-/* Share buttons */
+/* Share icons container */
 
 .share-icons {
-    display.article-share {
-    position: relative;
-    border: none;
-    padding-top: 0;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
-: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 9px;
 }
 
+/* Common icon style */
+
 .share-icon {
-    width: 29px;
-    height: 29px;
+    width: 32px;
+    height: 32px;
     border: none;
     border-radius: 50%;
     display: inline-flex;
@@ -343,7 +335,7 @@ footer p {
 }
 
 .share-icon:hover {
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 .share-letter {
@@ -387,8 +379,6 @@ footer p {
     border-radius: 6px;
     background: transparent;
     color: #333;
-    gap: 5px;
-    font-size: 12px;
 }
 
 /* Copy link button */
