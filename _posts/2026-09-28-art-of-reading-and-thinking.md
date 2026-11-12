@@ -1,0 +1,1 @@
+_posts/2026-09-28-art-of-reading-and-thinking.md
