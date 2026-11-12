@@ -224,65 +224,74 @@ footer p {
 /* Article extras */
 
 .article-extras {
-    border-top: none;
+    border: none;
     margin-top: 40px;
     padding-top: 0;
 }
 
-/* Tags */
+/* Short subtle divider above tags */
+
+.article-extras::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: var(--line);
+    margin-bottom: 18px;
+}
+
+/* Minimal tags */
 
 .article-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
-    margin-bottom: 22px;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 20px;
 }
 
 .article-tags a {
-    font-size: 10px;
-    line-height: 1.5;
+    font-size: 11px;
+    line-height: 1.6;
     color: #777;
-    background: #f0eee9;
-    padding: 3px 8px;
-    border-radius: 3px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
     text-decoration: none;
+}
+
+.article-tags a + a::before {
+    content: "·";
+    display: inline-block;
+    color: #c8c5bf;
+    font-size: 11px;
+    margin: 0 8px;
 }
 
 .article-tags a:hover {
     color: var(--text);
-    background: #e8e5de;
+    text-decoration: underline;
 }
 
 /* Sharing section */
 
 .article-share {
     position: relative;
-    border-top: none;
-    padding-top: 30px;
+    border: none;
+    padding-top: 0;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 13px;
-}
-
-/* Short divider above sharing */
-
-.article-share::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120px;
-    height: 1px;
-    background: #dedbd5;
+    gap: 10px;
 }
 
 /* Share heading */
 
 .share-label {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    color: #444;
+    color: #555;
     width: 100%;
 }
 
@@ -292,12 +301,12 @@ footer p {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 
 .share-icon {
-    width: 42px;
-    height: 42px;
+    width: 32px;
+    height: 32px;
     border: none;
     border-radius: 50%;
     display: inline-flex;
@@ -315,7 +324,7 @@ footer p {
 
 .share-letter {
     font-family: Arial, sans-serif;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -347,21 +356,23 @@ footer p {
 
 .share-icons .share-icon:nth-child(5) {
     width: auto;
-    height: 42px;
-    padding: 0 18px;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 11px;
     border: 1px solid #ccc;
-    border-radius: 7px;
+    border-radius: 6px;
     background: transparent;
     color: #333;
-    gap: 8px;
+    gap: 5px;
+    font-size: 12px;
 }
 
 /* Copy link button */
 
 .share-icons .share-icon:nth-child(6) {
-    width: 42px;
-    height: 42px;
-    border: 1px solid #dedbd5;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--line);
     background: transparent;
     color: #555;
 }
@@ -421,7 +432,6 @@ footer p {
     }
 
     .share-icons {
-        gap: 10px;
+        gap: 9px;
     }
-
 }
