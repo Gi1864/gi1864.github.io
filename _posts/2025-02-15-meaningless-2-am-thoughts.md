@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Meaningless 2 am thoughts"
