@@ -40,7 +40,8 @@ header {
     white-space: nowrap;
 }
 
-/* Tahsin logo and tricolour ribbon */
+
+/* Refined Tahsin logo */
 
 .logo.logo-brand {
     display: inline-flex;
@@ -67,6 +68,7 @@ header {
     overflow: hidden;
     filter: none;
 }
+
 
 /* Navigation */
 
