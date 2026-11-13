@@ -496,17 +496,23 @@ footer p {
     }
 }
 
-/* Tahsin logo with tricolour flowing ribbons */
+
+
+/* Tahsin logo - integrated tricolour waves */
 
 .logo.logo-brand {
     display: inline-flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    justify-content: center;
+    width: fit-content;
     text-decoration: none;
     line-height: 1;
 }
 
 .logo-brand .logo-word {
+    display: block;
+    white-space: nowrap;
     font: inherit;
     color: inherit;
 }
@@ -514,10 +520,9 @@ footer p {
 .logo-brand .logo-ribbons {
     display: block;
     width: 100%;
-    max-width: 125px;
-    height: 21px;
-    margin-top: 3px;
+    max-width: none;
+    height: 23px;
+    margin-top: -3px;
     overflow: visible;
-    filter: drop-shadow(0 0 7px rgba(0, 105, 220, 0.35));
+    filter: drop-shadow(0 2px 3px rgba(0, 90, 180, 0.16));
 }
-
