@@ -7,13 +7,12 @@ wordpress_status: publish
 wordpress_original_categories: ["Blog", "Epistles"]
 ---
 
-<figure>
+  <figure>
   <img src="/assets/images/tap-water.jpg"
        alt="Water tap"
        style="width:100%; max-width:100%; height:auto;">
   <figcaption><em><sub>Image by - pixabay.com</sub></em></figcaption>
-</figure>
-
+</figure> 
 In today’s convenient world, we often don’t think twice before wasting water on unnecessary things such as running the tap, waiting for the correct temperature or just to enjoy the water drippings. When we run a long bath, flush the toilet, excessively wash dishes, brush our teeth or spend extra time in the shower just because we feel like it – it can be easy to forget about those who are in desperate need for something we all too often waste.
 
 Today I woke up at 7 o' clock in the morning. With the opening of my eyes, I ran towards the motor switch to check if water was coming. After a few minutes, I came to realise that water was not coming and the water tank was also empty.
