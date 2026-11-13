@@ -3,7 +3,7 @@ layout: post
 title: "Why Public Policy Matters More Than Ever"
 date: 2026-10-12
 categories:
-  - blog
+  - econ
 tags:
   - Public Policy
   - Governance
