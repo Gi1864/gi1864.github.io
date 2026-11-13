@@ -10,6 +10,9 @@ permalink: /blog/
 
     <div id="article-list">
 
+       {% assign blog_posts =
+        site.categories.blog | sort: "date"
+        | reverse %}
         {% for post in site.posts %}
 
         <article class="article">
