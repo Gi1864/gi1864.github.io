@@ -30,7 +30,8 @@ layout: default
         {% if page.tags.size > 0 %}
         <div class="article-tags">
             {% for tag in page.tags %}
-                <a href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}"> 
+                <a href="{{ '/tags/' 
+                    | relative_url }}#{{ tag | slugify }}"> 
                     {{ tag }}
                 </a>
             {% endfor %}
