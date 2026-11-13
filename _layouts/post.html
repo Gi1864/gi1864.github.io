@@ -22,103 +22,18 @@ layout: default
         </div>
     </article>
 
-    {% assign share_url = page.url | absolute_url %}
-    {% assign share_title = page.title | uri_escape %}
-
+    {% if page.tags.size > 0 %}
     <section class="article-extras">
 
-        {% if page.tags.size > 0 %}
         <div class="article-tags">
             {% for tag in page.tags %}
-                <a href="{{ '/tags/' 
-                    | relative_url }}#{{ tag | slugify }}"> 
+                <a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">
                     {{ tag }}
                 </a>
             {% endfor %}
         </div>
-        {% endif %}
-
-        <div class="article-share">
-
-            <span class="share-label">Share this:</span>
-
-            <div class="share-icons">
-
-                <a class="share-icon" aria-label="Share on Facebook"
-                   href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | uri_escape }}"
-                   target="_blank" rel="noopener noreferrer">
-                    <span class="share-letter">f</span>
-                </a>
-
-                <a class="share-icon" aria-label="Share on X"
-                   href="https://twitter.com/intent/tweet?url={{ share_url | uri_escape }}&text={{ share_title }}"
-                   target="_blank" rel="noopener noreferrer">
-                    <span class="share-letter">𝕏</span>
-                </a>
-
-                <a class="share-icon" aria-label="Share on Telegram"
-                   href="https://t.me/share/url?url={{ share_url | uri_escape }}&text={{ share_title }}"
-                   target="_blank" rel="noopener noreferrer">
-                    <span class="share-letter">➤</span>
-                </a>
-
-                <a class="share-icon" aria-label="Share on WhatsApp"
-                   href="https://wa.me/?text={{ share_title }}%20{{ share_url | uri_escape }}"
-                   target="_blank" rel="noopener noreferrer">
-                    <span class="share-letter">◉</span>
-                </a>
-
-                <button class="share-icon" type="button"
-                        aria-label="More sharing options"
-                        onclick="shareArticle()">
-                    <span class="share-letter">•••</span>
-                </button>
-
-                <button class="share-icon" type="button"
-                        aria-label="Copy article link"
-                        onclick="copyArticleLink()">
-                    <span class="share-letter">↗</span>
-                </button>
-
-            </div>
-
-            <span id="share-message" class="share-message" aria-live="polite"></span>
-
-        </div>
 
     </section>
+    {% endif %}
 
 </main>
-
-<script>
-const articleUrl = {{ share_url | jsonify }};
-const articleTitle = {{ page.title | jsonify }};
-
-async function shareArticle() {
-    if (navigator.share) {
-        try {
-            await navigator.share({
-                title: articleTitle,
-                url: articleUrl
-            });
-        } catch (error) {
-            if (error.name !== "AbortError") {
-                await copyArticleLink();
-            }
-        }
-    } else {
-        await copyArticleLink();
-    }
-}
-
-async function copyArticleLink() {
-    const message = document.getElementById("share-message");
-
-    try {
-        await navigator.clipboard.writeText(articleUrl);
-        message.textContent = "Link copied!";
-    } catch (error) {
-        message.textContent = "Please copy the link from your browser.";
-    }
-}
-</script>
