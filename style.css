@@ -86,6 +86,7 @@ main {
     margin-bottom: 24px;
 }
 
+
 /* Article listings */
 
 .article {
@@ -127,6 +128,15 @@ main {
 
 .read-more:hover {
     text-decoration: underline;
+}
+/* All Articles page */
+
+.articles-page {
+    margin-top: 60px;
+}
+
+.articles-page .page-title {
+    margin-bottom: 40px;
 }
 
 /* Blog page */
