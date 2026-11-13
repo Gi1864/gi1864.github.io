@@ -10,9 +10,9 @@ permalink: /blog/
 
     <div id="article-list">
 
-       {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" | sort: "date" | reverse %}
+        {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" | sort: "date" | reverse %}
 
-{% for post in blog_posts %}
+        {% for post in blog_posts %}
 
         <article class="article">
 
@@ -40,10 +40,9 @@ permalink: /blog/
 
     </div>
 
-    <!-- Numbered pagination -->
-
-    <nav id="pagination" aria-label="Blog pagination"
-         style="display:flex; justify-content:center; align-items:center; gap:10px; margin-top:40px;">
+    <nav id="pagination"
+         aria-label="Blog pagination"
+         style="display:flex; justify-content:center; align-items:center; gap:8px; margin-top:40px; flex-wrap:wrap;">
     </nav>
 
 </main>
@@ -67,11 +66,13 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPage = page;
 
         articles.forEach(function (article, index) {
+
             const start = (page - 1) * perPage;
             const end = start + perPage;
 
             article.style.display =
                 index >= start && index < end ? "" : "none";
+
         });
 
         pagination.innerHTML = "";
@@ -86,15 +87,37 @@ document.addEventListener("DOMContentLoaded", function () {
             button.type = "button";
             button.disabled = disabled;
 
+            const isNumber = !isNaN(Number(label));
+
             button.style.cssText =
-                "padding:7px 12px; border:1px solid #dedbd5;" +
+                "width:" + (isNumber ? "36px" : "auto") + ";" +
+                "height:36px;" +
+                "min-width:" + (isNumber ? "36px" : "auto") + ";" +
+                "padding:" + (isNumber ? "0" : "0 12px") + ";" +
+                "border:1px solid #dedbd5;" +
                 "background:" + (active ? "#242424" : "transparent") + ";" +
                 "color:" + (active ? "#fff" : "#242424") + ";" +
-                "border-radius:4px; cursor:pointer; font:inherit;";
+                "border-radius:" + (isNumber ? "50%" : "20px") + ";" +
+                "cursor:pointer;" +
+                "font:inherit;" +
+                "font-size:14px;";
+
+            if (disabled) {
+                button.style.opacity = "0.4";
+                button.style.cursor = "default";
+            }
 
             button.addEventListener("click", function () {
+
+                if (disabled) return;
+
                 showPage(pageNumber);
-                window.scrollTo({ top: 0, behavior: "smooth" });
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
             });
 
             pagination.appendChild(button);
@@ -107,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         addButton("Next", currentPage + 1, false, currentPage === totalPages);
+
     }
 
     showPage(1);
