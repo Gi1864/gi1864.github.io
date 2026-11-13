@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "The Art of Reading and Thinking"
 date: 2026-09-28
 excerpt: "Reading is not simply about collecting information. It is about learning to think, question, and understand the world around us."
