@@ -10,18 +10,36 @@
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v=2"> 
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v=3">
+</head>
 
 <body>
 
 <header>
-    <a href="{{ '/' | relative_url }}" class="logo">Tahsin.</a>
+    <a href="{{ '/' | relative_url }}" class="logo logo-brand">
+        <span class="logo-word">Tahsin.</span>
+
+        <svg class="logo-ribbons"
+             viewBox="0 0 180 34"
+             xmlns="http://www.w3.org/2000/svg"
+             aria-hidden="true">
+
+            <path
+                d="M2 5 C42 27, 104 -3, 178 12 C130 3, 72 39, 2 5Z"
+                fill="#FF9933"/>
+
+            <path
+                d="M10 17 C62 36, 117 3, 178 20 C128 13, 65 43, 10 17Z"
+                fill="#138808"/>
+
+        </svg>
+    </a>
 
     <nav>
-    <a href="{{ '/econ/' | relative_url }}">Econ</a>
-    <a href="{{ '/blog/' | relative_url }}">Blog</a>
-    <a href="{{ '/about/' | relative_url }}">About</a>
-</nav>
+        <a href="{{ '/econ/' | relative_url }}">Econ</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+    </nav>
 </header>
 
 {{ content }}
