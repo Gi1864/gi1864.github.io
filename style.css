@@ -455,7 +455,7 @@ header a.logo.logo-brand .logo-ribbons {
     min-width: 85px !important;
     max-width: 85px !important;
     height: 11px;
-    margin: -1px auto 0;
+    margin: 1px auto 0;
     flex: 0 0 85px;
     filter: none;
 }
