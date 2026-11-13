@@ -39,15 +39,13 @@ header {
     color: var(--text);
     white-space: nowrap;
 }
-
-/* Tahsin logo - integrated tricolour waves */
+/* Refined Tahsin logo */
 
 .logo.logo-brand {
     display: inline-flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    width: fit-content;
+    align-items: center;
+    width: auto;
     text-decoration: none;
     line-height: 1;
 }
@@ -61,14 +59,13 @@ header {
 
 .logo-brand .logo-ribbons {
     display: block;
-    width: 100%;
-    max-width: none;
-    height: 23px;
-    margin-top: -3px;
-    overflow: visible;
-    filter: drop-shadow(0 2px 3px rgba(0, 90, 180, 0.16));
+    width: 105px;
+    height: 13px;
+    margin: -1px auto 0;
+    padding: 0;
+    overflow: hidden;
+    filter: none;
 }
-
 
 /* Navigation */
 
