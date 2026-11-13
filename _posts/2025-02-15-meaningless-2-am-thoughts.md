@@ -1,10 +1,11 @@
+
 ---
+layout: post
 title: "Meaningless 2 am thoughts"
 date: 2025-02-15T02:30:00 +0530
-excerpt: "" 
+excerpt: "Sometimes I can't comprehend my own thoughts. A collection of midnight thoughts about movies, memories and emotions."
 categories: [blog]
-wordpress_status: publish
-wordpress_original_categories: ["Blog"]
+tags: ["Blog"]
 ---
 
 <figure>
