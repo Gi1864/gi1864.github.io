@@ -1,6 +1,7 @@
 ---
 title: "The undesirable facet of him"
 date: 2023-09-25T21:04:57 +0530
+excerpt: "" 
 categories: [blog]
 wordpress_status: publish
 wordpress_original_categories: ["Blog"]
