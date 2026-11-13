@@ -41,33 +41,39 @@ header {
 }
 
 
-/* Refined Tahsin logo */
+
+/* Tahsin logo - ribbon exactly matching word width */
 
 .logo.logo-brand {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
+    display: inline-block;
+    width: max-content;
+    padding: 0;
+    margin: 0;
     text-decoration: none;
     line-height: 1;
 }
 
 .logo-brand .logo-word {
     display: block;
+    width: max-content;
     white-space: nowrap;
     font: inherit;
     color: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 .logo-brand .logo-ribbons {
     display: block;
-    width: 105px;
-    height: 13px;
-    margin: -1px auto 0;
+    width: 100%;
+    height: 20px;
+    margin: -2px 0 0;
     padding: 0;
     overflow: hidden;
-    filter: none;
+    box-sizing: border-box;
+    filter: drop-shadow(0 2px 3px rgba(0, 90, 180, 0.16));
 }
+
 
 
 /* Navigation */
