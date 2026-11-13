@@ -1,6 +1,7 @@
 ---
 title: "Meaningless 2 am thoughts"
 date: 2025-02-15T02:30:00 +0530
+excerpt: "" 
 categories: [blog]
 wordpress_status: publish
 wordpress_original_categories: ["Blog"]
