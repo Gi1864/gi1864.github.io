@@ -154,6 +154,27 @@ main {
 .econ-page .page-title {
     margin-bottom: 40px;
 }
+
+/* Tags page */
+
+.tags-page {
+    margin-top: 60px;
+}
+
+.tags-page .page-title {
+    margin-bottom: 40px;
+}
+
+.tag-section {
+    margin-bottom: 45px;
+}
+
+.tag-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
 /* Footer */
 
 footer {
