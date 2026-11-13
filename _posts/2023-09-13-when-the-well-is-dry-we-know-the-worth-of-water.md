@@ -2,13 +2,10 @@
 layout: post
 title: "When the well is dry, we know the worth of water"
 date: 2023-09-13T03:23:47 +0530
-excerpt: "" 
+excerpt: ""
 categories: [blog]
-tags: ["Epistles" "Blog"]
-wordpress_status: publish
-wordpress_original_categories: ["Blog", "Epistles"]
----
-
+tags: ["Epistles", "Blog"]
+--- 
   <figure>
   <img src="/assets/images/tap-water.jpg"
        alt="Water tap"
