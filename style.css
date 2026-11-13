@@ -1,3 +1,10 @@
+
+/* ========================================
+   T A H S I N  -  PERSONAL BLOG
+   ======================================== */
+
+/* 1. Global settings */
+
 :root {
     --background: #faf9f6;
     --text: #242424;
@@ -18,7 +25,8 @@ body {
     line-height: 1.7;
 }
 
-/* Header */
+
+/* 2. Header and navigation */
 
 header {
     max-width: 850px;
@@ -27,15 +35,47 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
     color: var(--text);
+    white-space: nowrap;
 }
+
+/* Tahsin logo and tricolour ribbon */
+
+.logo.logo-brand {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.logo-brand .logo-word {
+    display: block;
+    white-space: nowrap;
+    font: inherit;
+    color: inherit;
+}
+
+.logo-brand .logo-ribbons {
+    display: block;
+    width: 105px;
+    height: 13px;
+    margin: -1px auto 0;
+    padding: 0;
+    overflow: hidden;
+    filter: none;
+}
+
+/* Navigation */
 
 nav {
     display: flex;
@@ -50,23 +90,26 @@ nav a {
 }
 
 nav a:hover {
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
-/* Main content */
+
+/* 3. Main content */
 
 main {
-    max-width: 700px;
-    margin: 90px auto 100px;
-    padding: 0 25px;
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 25px;
 }
+
+
+/* 4. Homepage introduction */
 
 .intro {
     margin-bottom: 65px;
 }
 
-.intro h1,
-.page-title {
+.intro h1 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
     font-weight: 400;
@@ -80,14 +123,8 @@ main {
     max-width: 540px;
 }
 
-.bio-content p {
-    font-size: 17px;
-    color: #333;
-    margin-bottom: 24px;
-}
 
-
-/* Article listings */
+/* 5. Article listings */
 
 .article {
     padding: 32px 0;
@@ -99,15 +136,14 @@ main {
 }
 
 .article-meta {
-    font-size: 12px;
     color: var(--muted);
+    font-size: 13px;
     margin-bottom: 10px;
-    letter-spacing: 0.4px;
 }
 
 .article h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1.4;
     margin-bottom: 10px;
@@ -121,51 +157,54 @@ main {
 
 .read-more {
     color: var(--text);
-    font-size: 13px;
-    text-decoration: none;
+    font-size: 14px;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .read-more:hover {
-    text-decoration: underline;
+    opacity: 0.6;
 }
-/* All Articles page */
 
+
+/* 6. Blog, Economics and All Articles pages */
+
+.blog-page,
+.econ-page,
 .articles-page {
     margin-top: 60px;
 }
 
+.blog-page .page-title,
+.econ-page .page-title,
 .articles-page .page-title {
     margin-bottom: 40px;
 }
 
-/* Blog page */
-
-.blog-page {
-    margin-top: 60px;
-}
-
-.blog-page .page-title {
+.blog-page .intro,
+.econ-page .intro,
+.articles-page .intro {
     margin-bottom: 40px;
 }
 
-/* About page */
+
+/* 7. About page */
+
 .about-page {
     margin-top: 60px;
 }
+
 .about-page .page-title {
     margin-bottom: 40px;
 }
 
-/* Economics page */
-.econ-page {
-    margin-top: 60px;
-}
-.econ-page .page-title {
-    margin-bottom: 40px;
+.bio-content p {
+    margin-bottom: 20px;
+    color: #555;
 }
 
-/* Tags page */
+
+/* 8. Tags page */
 
 .tags-page {
     margin-top: 60px;
@@ -185,12 +224,127 @@ main {
     font-weight: 500;
     margin-bottom: 10px;
 }
-/* Footer */
+
+
+/* 9. Individual article page */
+
+.article-page {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px 25px;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.article-content {
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.article-content p {
+    margin-bottom: 24px;
+}
+
+.article-content h2,
+.article-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    margin: 38px 0 16px;
+}
+
+.article-content h2 {
+    font-size: 27px;
+}
+
+.article-content h3 {
+    font-size: 22px;
+}
+
+.article-content ul,
+.article-content ol {
+    margin: 15px 0 24px 25px;
+}
+
+.article-content li {
+    margin-bottom: 8px;
+}
+
+.article-content blockquote {
+    border-left: 3px solid var(--line);
+    padding-left: 20px;
+    margin: 25px 0;
+    color: #666;
+}
+
+.article-content a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 10. Featured image */
+
+.featured-image {
+    margin: 25px 0;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* 11. Article tags */
+
+.article-extras {
+    border-top: 1px solid var(--line);
+    margin-top: 30px;
+    padding-top: 18px;
+}
+
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.article-tags a {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+    background: transparent;
+    padding: 0;
+    text-decoration: none;
+}
+
+.article-tags a:hover {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+/* 12. Footer */
 
 footer {
     border-top: 1px solid var(--line);
     padding: 40px 25px;
     text-align: center;
+    margin-top: 30px;
 }
 
 footer p {
@@ -218,308 +372,86 @@ footer p {
 .copyright {
     margin-top: 30px;
     font-size: 12px;
-    color: #999;
-}
-
-/* Individual article page */
-
-.article-page {
-    max-width: 700px;
-    margin: 70px auto 100px;
-    padding: 0 25px;
-}
-
-.article-page .page-title {
-    font-size: 42px;
-    line-height: 1.3;
-    margin: 25px 0 35px;
-}
-
-.article-content {
-    font-size: 17px;
-    line-height: 1.9;
-    color: #333;
-}
-
-.article-content p {
-    margin-bottom: 24px;
-}
-
-.article-content h2,
-.article-content h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    margin: 38px 0 16px;
-}
-
-.article-content img {
-    max-width: 100%;
-    height: auto;
-}
-
-.featured-image {
-    margin: 25px 0;
-}
-
-.featured-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Article extras */
-
-.article-extras {
-    border: none;
-    margin-top: 40px;
-    padding-top: 0;
-}
-
-/* First subtle divider: article and tags */
-
-.article-extras::before {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 1px;
-    background: var(--line);
-    margin-bottom: 18px;
-}
-
-/* Article tags */
-
-.article-tags {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0;
-    position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 18px;
-}
-
-/* Second subtle divider: tags and sharing */
-
-.article-tags::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 120px;
-    height: 1px;
-    background: var(--line);
-}
-
-.article-tags a {
-    font-size: 11px;
-    line-height: 1.6;
-    color: #777;
-    background: transparent;
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    text-decoration: none;
-}
-
-.article-tags a + a::before {
-    content: "·";
-    display: inline-block;
-    color: #c8c5bf;
-    font-size: 11px;
-    margin: 0 8px;
-}
-
-.article-tags a:hover {
-    color: var(--text);
-    text-decoration: underline;
-}
-
-/* Sharing section */
-
-.article-share {
-    position: relative;
-    border: none;
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Share heading */
-
-.share-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #555;
-    width: 100%;
-}
-
-/* Share icons container */
-
-.share-icons {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 9px;
-}
-
-/* Common icon style */
-
-.share-icon {
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: opacity 0.2s;
-    color: #fff;
-}
-
-.share-icon:hover {
-    opacity: 0.75;
-}
-
-.share-letter {
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-/* Facebook */
-
-.share-icons .share-icon:nth-child(1) {
-    background: #1877F2;
-}
-
-/* X */
-
-.share-icons .share-icon:nth-child(2) {
-    background: #000;
-}
-
-/* Telegram */
-
-.share-icons .share-icon:nth-child(3) {
-    background: #229ED9;
-}
-
-/* WhatsApp */
-
-.share-icons .share-icon:nth-child(4) {
-    background: #25D366;
-}
-
-/* More button */
-
-.share-icons .share-icon:nth-child(5) {
-    width: auto;
-    min-width: 30px;
-    height: 30px;
-    padding: 0 11px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background: transparent;
-    color: #333;
-}
-
-/* Copy link button */
-
-.share-icons .share-icon:nth-child(6) {
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--line);
-    background: transparent;
-    color: #555;
-}
-
-.share-message {
-    font-size: 11px;
     color: var(--muted);
 }
 
-/* Mobile responsive */
+
+/* 13. Mobile responsiveness */
 
 @media (max-width: 600px) {
 
     header {
         padding: 25px 20px;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 12px;
+        gap: 12px;
     }
 
     .logo {
-        font-size: 21px;
-    }
-
-    main {
-        margin-top: 55px;
-    }
-
-    .intro h1,
-    .page-title {
-        font-size: 34px;
-    }
-
-    .article h2 {
         font-size: 23px;
     }
 
-    .bio-content p {
-        font-size: 16px;
+    nav {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    main {
+        padding: 25px 20px;
+    }
+
+    .intro {
+        margin-bottom: 55px;
+    }
+
+    .intro h1 {
+        font-size: 34px;
+        line-height: 1.4;
+    }
+
+    .intro p {
+        font-size: 15px;
+    }
+
+    .article {
+        padding: 28px 0;
+    }
+
+    .article h2 {
+        font-size: 24px;
     }
 
     .article-page {
-        margin-top: 55px;
+        padding: 30px 20px;
     }
 
-    .article-page .page-title {
-        font-size: 34px;
+    .page-title {
+        font-size: 30px;
     }
 
     .article-content {
         font-size: 16px;
     }
 
-    .share-icons {
-        gap: 9px;
+    .article-content h2 {
+        font-size: 24px;
     }
-}
 
-/* Refined Tahsin logo */
+    .article-content h3 {
+        font-size: 20px;
+    }
 
-.logo.logo-brand {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    text-decoration: none;
-    line-height: 1;
-}
+    .blog-page,
+    .econ-page,
+    .articles-page,
+    .about-page,
+    .tags-page {
+        margin-top: 40px;
+    }
 
-.logo-brand .logo-word {
-    display: block;
-    white-space: nowrap;
-    font: inherit;
-    color: inherit;
-}
+    footer {
+        padding: 35px 20px;
+    }
 
-.logo-brand .logo-ribbons {
-    display: block;
-    width: 105px;
-    height: 13px;
-    margin: -1px auto 0;
-    padding: 0;
-    overflow: hidden;
-    filter: none;
 }
