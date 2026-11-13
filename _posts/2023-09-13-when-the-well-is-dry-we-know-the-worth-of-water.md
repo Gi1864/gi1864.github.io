@@ -8,7 +8,7 @@ wordpress_original_categories: ["Blog", "Epistles"]
 ---
 
 <figure>
-  <img src="/assets/images/water-tap.jpg"
+  <img src="/assets/images/tap-water.jpg"
        alt="Water tap"
        style="width:100%; max-width:100%; height:auto;">
   <figcaption><em><sub>Image by - pixabay.com</sub></em></figcaption>
