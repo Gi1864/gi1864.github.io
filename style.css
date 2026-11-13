@@ -448,15 +448,3 @@ footer p {
 
 }
 
-/* Final logo ribbon width correction */
-
-header a.logo.logo-brand .logo-ribbons {
-    width: 85px !important;
-    min-width: 85px !important;
-    max-width: 85px !important;
-    height: 11px;
-    margin: 1px auto 0;
-    flex: 0 0 85px;
-    filter: none;
-}
-
