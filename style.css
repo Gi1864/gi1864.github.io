@@ -39,13 +39,15 @@ header {
     color: var(--text);
     white-space: nowrap;
 }
-/* Refined Tahsin logo */
+
+/* Tahsin logo */
 
 .logo.logo-brand {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
+    width: max-content;
+    flex-shrink: 0;
     text-decoration: none;
     line-height: 1;
 }
@@ -55,33 +57,40 @@ header {
     white-space: nowrap;
     font: inherit;
     color: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 .logo-brand .logo-ribbons {
     display: block;
-    width: 105px;
-    height: 13px;
-    margin: -1px auto 0;
+    width: 85px;
+    min-width: 85px;
+    max-width: 85px;
+    height: 11px;
+    margin: -2px auto 0;
     padding: 0;
     overflow: hidden;
+    flex: 0 0 85px;
     filter: none;
 }
 
 /* Navigation */
 
-nav {
+header nav {
     display: flex;
+    align-items: center;
     gap: 28px;
+    flex-shrink: 0;
 }
 
-nav a {
+header nav a {
     color: var(--text);
     text-decoration: none;
     font-size: 14px;
     transition: opacity 0.2s;
 }
 
-nav a:hover {
+header nav a:hover {
     opacity: 0.6;
 }
 
@@ -381,11 +390,11 @@ footer p {
         font-size: 23px;
     }
 
-    nav {
+    header nav {
         gap: 16px;
     }
 
-    nav a {
+    header nav a {
         font-size: 13px;
     }
 
@@ -447,4 +456,3 @@ footer p {
     }
 
 }
-
