@@ -13,7 +13,9 @@ permalink: /econ/
         public finance and the ideas that shape economic life.
     </p>
 
-    {% assign economics_posts = site.categories.econ | sort: "date" | reverse %}
+    {% assign economics_posts = site.categories.econ | default: empty %}
+
+    {% assign economics_posts = economics_posts | sort: "date" | reverse %}
 
     {% for post in economics_posts %}
 
