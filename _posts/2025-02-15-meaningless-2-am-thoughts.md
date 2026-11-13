@@ -2,7 +2,7 @@
 layout: post
 title: "Meaningless 2 am thoughts"
 date: 2025-02-15T02:30:00 +0530
-excerpt: "Sometimes I can't comprehend my own thoughts. A collection of midnight thoughts about movies, memories and emotions."
+excerpt: ""
 categories: [blog]
 tags: ["Blog"]
 ---
