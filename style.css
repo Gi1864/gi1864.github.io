@@ -495,36 +495,30 @@ footer p {
         gap: 9px;
     }
 }
-/* Tahsin wordmark with integrated tricolour */
+
+/* Refined Tahsin logo */
 
 .logo.logo-brand {
-    position: relative;
-    display: inline-block;
-    width: max-content;
-    padding: 0 0 9px;
-    margin: 0;
-    line-height: 1;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
     text-decoration: none;
+    line-height: 1;
 }
 
 .logo-brand .logo-word {
     display: block;
-    width: max-content;
-    margin: 0;
-    padding: 0;
     white-space: nowrap;
     font: inherit;
     color: inherit;
 }
 
 .logo-brand .logo-ribbons {
-    position: absolute;
-    left: 5px;
-    bottom: 0;
     display: block;
-    width: calc(100% - 10px);
-    height: 10px;
-    margin: 0;
+    width: 105px;
+    height: 13px;
+    margin: -1px auto 0;
     padding: 0;
     overflow: hidden;
     filter: none;
