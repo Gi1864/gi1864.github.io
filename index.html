@@ -15,7 +15,7 @@ title: Home
         </p>
     </section>
 
-    <!-- Latest articles -->
+    <!-- Latest four articles from all categories -->
 
     {% for post in site.posts limit:4 %}
 
@@ -44,7 +44,7 @@ title: Home
     {% endfor %}
 
     <div class="view-all" style="margin-top:35px;">
-        <a href="{{ '/blog.html' | relative_url }}" class="read-more">
+        <a href="{{ '/blog/' | relative_url }}" class="read-more">
             View all articles →
         </a>
     </div>
