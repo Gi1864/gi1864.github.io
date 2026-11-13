@@ -139,6 +139,13 @@ main {
     margin-bottom: 40px;
 }
 
+/* Economics page */
+.econ-page {
+    margin-top: 60px;
+}
+.econ-page .page-title {
+    margin-bottom: 40px;
+}
 /* Footer */
 
 footer {
@@ -321,8 +328,8 @@ footer p {
 /* Common icon style */
 
 .share-icon {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 50%;
     display: inline-flex;
@@ -372,8 +379,8 @@ footer p {
 
 .share-icons .share-icon:nth-child(5) {
     width: auto;
-    min-width: 32px;
-    height: 32px;
+    min-width: 30px;
+    height: 30px;
     padding: 0 11px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -384,8 +391,8 @@ footer p {
 /* Copy link button */
 
 .share-icons .share-icon:nth-child(6) {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border: 1px solid var(--line);
     background: transparent;
     color: #555;
