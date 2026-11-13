@@ -51,12 +51,8 @@ title: Home
 
     <nav id="homepage-pagination"
          aria-label="Homepage pagination"
-         style="display:flex; justify-content:center; align-items:center; gap:10px; margin-top:40px; flex-wrap:wrap;">
+         style="display:flex; justify-content:center; align-items:center; gap:8px; margin-top:40px; flex-wrap:wrap;">
     </nav>
-
-    <div class="view-all" style="margin-top:35px;">
-     
-    </div>
 
 </main>
 
@@ -100,14 +96,20 @@ document.addEventListener("DOMContentLoaded", function () {
             button.type = "button";
             button.disabled = disabled;
 
+            const isNumber = !isNaN(Number(label));
+
             button.style.cssText =
-                "padding:7px 12px;" +
+                "width:" + (isNumber ? "36px" : "auto") + ";" +
+                "height:36px;" +
+                "min-width:" + (isNumber ? "36px" : "auto") + ";" +
+                "padding:" + (isNumber ? "0" : "0 12px") + ";" +
                 "border:1px solid #dedbd5;" +
                 "background:" + (active ? "#242424" : "transparent") + ";" +
                 "color:" + (active ? "#fff" : "#242424") + ";" +
-                "border-radius:4px;" +
+                "border-radius:" + (isNumber ? "50%" : "20px") + ";" +
                 "cursor:pointer;" +
-                "font:inherit;";
+                "font:inherit;" +
+                "font-size:14px;";
 
             if (disabled) {
                 button.style.opacity = "0.4";
