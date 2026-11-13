@@ -139,6 +139,14 @@ main {
     margin-bottom: 40px;
 }
 
+/* About page */
+.about-page {
+    margin-top: 60px;
+}
+.about-page .page-title {
+    margin-bottom: 40px;
+}
+
 /* Economics page */
 .econ-page {
     margin-top: 60px;
