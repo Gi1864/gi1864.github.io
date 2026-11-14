@@ -44,7 +44,7 @@ header {
 
     /* Header appearance */
     background: var(--background);
-    border-bottom: 1px solid var(--line);
+    border-bottom: none;
 }
 
 .logo {
