@@ -3,7 +3,7 @@ layout: post
 title: "When the well is dry, we know the worth of water"
 date: 2023-09-13T03:23:47 +0530
 excerpt: ""
-categories: [blog]
+categories: [Blog]
 tags: ["Epistles", "Blog"]
 --- 
   <figure>
